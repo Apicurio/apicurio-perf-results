@@ -11,7 +11,7 @@ on:
 
 jobs:
   process:
-    name: gatling-report
+    name: process-results
     runs-on: ubuntu-18.04
     if: github.repository_owner == 'Apicurio'
     steps:
@@ -26,11 +26,15 @@ jobs:
 
       - name: Generate report
         run: ./scripts/run-gatling-report.sh
+
+      - name: Generate web page
+        run: python ./scripts/generate-index.py
       
       - name: Commit report
         run: |
           git config --global user.name "apicurio-ci"
           git config --global user.email "apicurio.ci@gmail.com"
           git add reports
+          git add index.html
           git commit -m "Automated test results report update"
           git push
