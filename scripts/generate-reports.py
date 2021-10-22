@@ -18,7 +18,7 @@ for report in reports:
             print("Trend report already exists, skipping", latestSimulationName)
             generateTrendReport = False
 if generateTrendReport:
-    trendReportId = hashlib.md5(base64.encodebytes(latestSimulationName.encode("UTF-8"))).hexdigest()
+    trendReportId = hashlib.md5(base64.standard_b64encode(latestSimulationName.encode("UTF-8"))).hexdigest()
     os.system("java -jar gatling-report.jar " + " ".join(simulations) + " -o reports/"+latestSimulationName+"/trend")
     os.system("java -jar gatling-report.jar " + " ".join(simulations) + " > reports/"+latestSimulationName+"/trend/stats.csv")
     os.system("REPORT_ID=" + trendReportId + " LOG_FILES=\"" + " ".join(simulations) + "\" ./scripts/generate-summary.sh reports/"+latestSimulationName+"/trend")
@@ -38,7 +38,7 @@ for previous, current in zip(simulations, simulations[1:]):
                 print("Diff report already exists, skipping")
                 generateDiff = False
     if generateDiff :
-        diffid = hashlib.md5(base64.encodebytes((previous+current).encode("UTF-8"))).hexdigest()
+        diffid = hashlib.md5(base64.standard_b64encode((previous+current).encode("UTF-8"))).hexdigest()
         os.system("java -jar gatling-report.jar " + previous + " " + current + " -o reports/"+diffFolder+"/diff" + " --yaml --output-name diff.yaml")
         os.system("java -jar gatling-report.jar " + previous + " " + current + " -o reports/"+diffFolder+"/diff" + " -f")
         os.system("REPORT_ID=" + diffid + " LOG_FILES=\"" + previous + " " + current + "\" ./scripts/generate-summary.sh reports/" + diffFolder+"/diff")
