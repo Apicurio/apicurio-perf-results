@@ -6,7 +6,7 @@ indexTextTemplate = """<!DOCTYPE html>
 <body>
     <h2>Apicurio Perf Results</h2>
     <hr>
-	<h3>Generated Reports</h2>
+	<h3>Reports</h2>
     <hr>
     <ul>
 	{reportsList}
@@ -22,16 +22,18 @@ indexTextTemplate = """<!DOCTYPE html>
 
 def index_reports():
 	allreportdirs = os.listdir("reports")
+	allreportdirs.sort(reverse=True)
 
 	it = ""
 	for reportdir in allreportdirs:
-		it += "\t\t<li>\n\t\t\t<a href='" + "reports"+ "/"+reportdir+ "/index.html" + "'>" + "report"+ "-"+reportdir + "</a>\n\t\t</li>\n"
+		it += "\t\t<li>\n\t\t\t" + reportdir +"\t <a href='" + "reports"+ "/"+reportdir+ "/trend/index.html" + "'>" + "trend report"+ "</a>\n\t" + "<a href='" + "reports"+ "/"+reportdir+ "/diff/index.html" + "'>" + "diff report"+ "</a>\n\t\t</li>\n"
 	return it
 
 def index_results(folderPath):
 	print("Indexing: " + folderPath +'/')
 	#Getting the content of the folder
 	allfiles = os.listdir(folderPath)
+	allfiles.sort(reverse=True)
 
 	files = []
 	for af in allfiles:
