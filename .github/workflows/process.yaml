@@ -38,3 +38,10 @@ jobs:
           git add index.html
           git commit -m "Automated test results report update"
           git push
+
+      - name: Google Chat Notification
+        uses: Co-qn/google-chat-notification@releases/v1
+        with:
+          name: Apicurio Registry Perf Results
+          url: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
+          status: ${{ job.status }}
