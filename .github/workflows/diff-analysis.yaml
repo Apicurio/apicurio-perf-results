@@ -1,0 +1,20 @@
+name: Performance Diff Results Analysis
+on:
+  push:
+    paths:
+      - 'reports/**/diff/diff.yaml'
+    branches: [main]
+
+jobs:
+  process:
+    name: analyze-diff-results
+    runs-on: ubuntu-18.04
+    if: github.repository_owner == 'Apicurio'
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Analyze diff reports
+        env:
+          GOOGLE_CHAT_WEBHOOK: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
+        run: ./scripts/check-diff-reports.sh
