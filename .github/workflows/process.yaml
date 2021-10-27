@@ -31,13 +31,12 @@ jobs:
         run: python ./scripts/generate-index.py
       
       - name: Commit report
-        run: |
-          git config --global user.name "apicurio-ci"
-          git config --global user.email "apicurio.ci@gmail.com"
-          git add reports
-          git add index.html
-          git commit -m "Automated test results report update"
-          git push
+        run: ./scripts/commit-report.sh
+
+      - name: Analyze diff reports
+        env:
+          GOOGLE_CHAT_WEBHOOK: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
+        run: ./scripts/check-diff-reports.sh
 
       - name: Google Chat Notification
         uses: Co-qn/google-chat-notification@releases/v1
