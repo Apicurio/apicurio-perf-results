@@ -45,21 +45,36 @@ for file in $MODIFIED_FILES ; do
 
             rm -f diff-report-notification.md
             echo "---"
-            echo "# Apicurio Registry Perf Results" | tee -a diff-report-notification.md
+            echo "*Apicurio Registry Perf Results*" | tee -a diff-report-notification.md
             echo "" | tee -a diff-report-notification.md
             echo "Performance drop detected in:" | tee -a diff-report-notification.md
+            echo "" | tee -a diff-report-notification.md
             echo "  $file" | tee -a diff-report-notification.md
+            echo "" | tee -a diff-report-notification.md
             echo "Diff results (Throughput and Response time average):" | tee -a diff-report-notification.md
+            echo "\`\`\`" | tee -a diff-report-notification.md
             head -n 7 $file | while read line || [[ -n $line ]];
             do
                 echo "  "$line | tee -a diff-report-notification.md
             done
+            echo "\`\`\`" | tee -a diff-report-notification.md
             echo "Link: http://www.apicur.io/apicurio-perf-results/" | tee -a diff-report-notification.md
             echo "---"
             cat diff-report-notification.md
 
+            rm -f msg-text.json
+            echo "{\"text\": \"" | tee -a msg-text.json
+            cat diff-report-notification.md | tee -a msg-text.json
+
+            rm -f msg.json
+            awk '{printf "%s\\n", $0}' msg-text.json > msg.json
+
+            echo "\"}" | tee -a msg.json
+
+            cat msg.json
+
             if [[ ! -z $GOOGLE_CHAT_WEBHOOK ]]; then
-                curl -i $GOOGLE_CHAT_WEBHOOK -X POST -H "Content-Type: application/json" --data-binary @diff-report-notification.md
+                curl -i $GOOGLE_CHAT_WEBHOOK -X POST -H "Content-Type: application/json" --data-binary @msg.json
             else
                 echo "GOOGLE_CHAT_WEBHOOK not set, skipping notification send"
             fi
