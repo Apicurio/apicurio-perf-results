@@ -37,10 +37,3 @@ jobs:
         env:
           GOOGLE_CHAT_WEBHOOK: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
         run: ./scripts/check-diff-reports.sh
-
-      - name: Google Chat Notification
-        uses: Co-qn/google-chat-notification@releases/v1
-        with:
-          name: Apicurio Registry Perf Results
-          url: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
-          status: ${{ job.status }}
