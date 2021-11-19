@@ -8,12 +8,19 @@ fi
 
 # Currently only processing all tests configured with 10u-600i
 # that means 10 users with 600 iterations
-ALL_LOG_FILES=""
+E2E_TESTS_LOG_FILES=""
 for logfile in $(find **/End2EndSimulation/*10u-600i/simulation.log) ; do
-    ALL_LOG_FILES="$ALL_LOG_FILES $logfile"
+    E2E_TESTS_LOG_FILES="$E2E_TESTS_LOG_FILES $logfile"
 done
 
 mkdir -p reports
-python ./scripts/generate-reports.py $ALL_LOG_FILES
+python ./scripts/generate-reports.py $E2E_TESTS_LOG_FILES
+
+CP_TESTS_LOG_FILES=""
+for logfile in $(find **/ControlPlaneSimulation/*50u-300i/simulation.log) ; do
+    CP_TESTS_LOG_FILES="$CP_TESTS_LOG_FILES $logfile"
+done
+
+python ./scripts/generate-reports.py $CP_TESTS_LOG_FILES
 
 echo "SUCCESS"
