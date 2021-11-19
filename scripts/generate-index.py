@@ -35,13 +35,13 @@ def index_e2e_reports():
 	allreportdirs = os.listdir("reports")
 	allreportdirs.sort(reverse=True)
 	e2ereportsdirs = [d for d in allreportdirs if "End2EndSimulation" in d]
-	generate_reports_list(e2ereportsdirs)
+	return generate_reports_list(e2ereportsdirs)
 
 def index_cp_reports():
 	allreportdirs = os.listdir("reports")
 	allreportdirs.sort(reverse=True)
 	cpreportsdirs = [d for d in allreportdirs if "ControlPlaneSimulation" in d]
-	generate_reports_list(cpreportsdirs)
+	return generate_reports_list(cpreportsdirs)
 
 def index_results(folderPath):
 	print("Indexing: " + folderPath +'/')
