@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<h1>controlplanesimulation Trend report</h1>
+
+<div id="totalDiv"></div>
+  <div id="div20"></div>
+  <div id="div24"></div>
+  <div id="div21"></div>
+  <div id="div22"></div>
+  <div id="div23"></div>
+
+<script>
+function clone(obj) {
+    if(obj == null || typeof(obj) != 'object')
+        return obj;
+    var temp = new obj.constructor();
+    for(var key in obj)
+        temp[key] = clone(obj[key]);
+    return temp;
+}
+
+var data = [{
+  type: 'scatter',
+  mode: 'lines',
+  x: ['2021-11-19 05:40:34', '2021-11-23 05:40:54', '2021-11-24 05:40:24', '2021-11-25 05:40:41'],
+  y: [],
+  line: {
+    width: 2
+  },
+  error_y: {
+    array: [],
+    thickness: 0.5,
+    width: 0
+  },
+  name: 'Response time'
+  },
+  {
+    type: 'scatter',
+    mode: 'lines',
+    x: ['2021-11-19 05:40:34', '2021-11-23 05:40:54', '2021-11-24 05:40:24', '2021-11-25 05:40:41'],
+    y: [],
+    yaxis: 'y2',
+    name: 'Requests/s'
+  }
+];
+
+var layout = {
+  title: "",
+  xaxis: {
+    title: "Date"
+  },
+  yaxis: {
+    title: "Time in ms",
+    rangemode: "nonnegative"
+  },
+  yaxis2: {
+    title: 'Requests per second',
+    overlaying: 'y',
+    side: 'right',
+    rangemode:"tozero"
+  }
+};
+
+var layoutAll = clone(layout);
+layoutAll["title"] = "controlplanesimulation - Response time (avg + stddev)";
+var dataAll = clone(data);
+dataAll[0]["y"] = [27.279107438016528, 29.02006611570248, 27.198347107438018, 29.303735537190082];
+dataAll[0]["error_y"]["array"] = [43, 50, 44, 56];
+dataAll[1]["y"] = [80.12714389775512, 80.0522920095904, 80.08386965258161, 80.1413667215955];
+
+Plotly.plot('totalDiv', dataAll, layoutAll, {showLink: false});
+
+var layout20 = clone(layout);
+layout20["title"] = "Create registry instance - Response time (avg + stddev)";
+var data20 = clone(data);
+data20[0]["y"] = [1065.64, 1246.84, 1100.1, 1372.18];
+data20[0]["error_y"]["array"] = [203, 212, 236, 354];
+data20[1]["y"] = [0.1324415601615787, 0.1323178380323808, 0.132370032483606, 0.13246506896131488];
+Plotly.plot('div20', data20, layout20, {showLink: false});
+
+var layout24 = clone(layout);
+layout24["title"] = "Delete registry instance - Response time (avg + stddev)";
+var data24 = clone(data);
+data24[0]["y"] = [37.06, 38.76, 38.54, 40.28];
+data24[0]["error_y"]["array"] = [7, 5, 9, 8];
+data24[1]["y"] = [0.1324415601615787, 0.1323178380323808, 0.132370032483606, 0.13246506896131488];
+Plotly.plot('div24', data24, layout24, {showLink: false});
+
+var layout21 = clone(layout);
+layout21["title"] = "Check instance status - Response time (avg + stddev)";
+var data21 = clone(data);
+data21[0]["y"] = [28.05, 32.55, 28.3, 31.34];
+data21[0]["error_y"]["array"] = [5, 26, 9, 10];
+data21[1]["y"] = [0.2648831203231574, 0.2646356760647616, 0.264740064967212, 0.26493013792262976];
+Plotly.plot('div21', data21, layout21, {showLink: false});
+
+var layout22 = clone(layout);
+layout22["title"] = "Get instance url - Response time (avg + stddev)";
+var data22 = clone(data);
+data22[0]["y"] = [25.894152823920265, 27.421926910299003, 25.740265780730898, 27.433953488372094];
+data22[0]["error_y"]["array"] = [4, 6, 4, 4];
+data22[1]["y"] = [39.864909608635195, 39.82766924774663, 39.843379777565396, 39.87198575735578];
+Plotly.plot('div22', data22, layout22, {showLink: false});
+
+var layout23 = clone(layout);
+layout23["title"] = "Get list of registry instances - Response time (avg + stddev)";
+var data23 = clone(data);
+data23[0]["y"] = [25.169733333333333, 26.508133333333333, 25.0398, 26.653333333333332];
+data23[0]["error_y"]["array"] = [4, 5, 4, 4];
+data23[1]["y"] = [39.73246804847361, 39.69535140971425, 39.711009745081796, 39.73952068839447];
+Plotly.plot('div23', data23, layout23, {showLink: false});
+
+
+
+</script>
+
