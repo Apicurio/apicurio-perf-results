@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<h1>controlplanesimulation Trend report</h1>
+
+<div id="totalDiv"></div>
+  <div id="div26"></div>
+  <div id="div30"></div>
+  <div id="div27"></div>
+  <div id="div28"></div>
+  <div id="div29"></div>
+
+<script>
+function clone(obj) {
+    if(obj == null || typeof(obj) != 'object')
+        return obj;
+    var temp = new obj.constructor();
+    for(var key in obj)
+        temp[key] = clone(obj[key]);
+    return temp;
+}
+
+var data = [{
+  type: 'scatter',
+  mode: 'lines',
+  x: ['2021-11-19 05:40:34', '2021-11-23 05:40:54', '2021-11-24 05:40:24', '2021-11-25 05:40:41', '2021-11-26 05:54:12'],
+  y: [],
+  line: {
+    width: 2
+  },
+  error_y: {
+    array: [],
+    thickness: 0.5,
+    width: 0
+  },
+  name: 'Response time'
+  },
+  {
+    type: 'scatter',
+    mode: 'lines',
+    x: ['2021-11-19 05:40:34', '2021-11-23 05:40:54', '2021-11-24 05:40:24', '2021-11-25 05:40:41', '2021-11-26 05:54:12'],
+    y: [],
+    yaxis: 'y2',
+    name: 'Requests/s'
+  }
+];
+
+var layout = {
+  title: "",
+  xaxis: {
+    title: "Date"
+  },
+  yaxis: {
+    title: "Time in ms",
+    rangemode: "nonnegative"
+  },
+  yaxis2: {
+    title: 'Requests per second',
+    overlaying: 'y',
+    side: 'right',
+    rangemode:"tozero"
+  }
+};
+
+var layoutAll = clone(layout);
+layoutAll["title"] = "controlplanesimulation - Response time (avg + stddev)";
+var dataAll = clone(data);
+dataAll[0]["y"] = [27.279107438016528, 29.02006611570248, 27.198347107438018, 29.303735537190082, 27.550578512396694];
+dataAll[0]["error_y"]["array"] = [43, 50, 44, 56, 46];
+dataAll[1]["y"] = [80.12714389775512, 80.0522920095904, 80.08386965258161, 80.1413667215955, 80.4290257053825];
+
+Plotly.plot('totalDiv', dataAll, layoutAll, {showLink: false});
+
+var layout26 = clone(layout);
+layout26["title"] = "Create registry instance - Response time (avg + stddev)";
+var data26 = clone(data);
+data26[0]["y"] = [1065.64, 1246.84, 1100.1, 1372.18, 1152.5];
+data26[0]["error_y"]["array"] = [203, 212, 236, 354, 164];
+data26[1]["y"] = [0.1324415601615787, 0.1323178380323808, 0.132370032483606, 0.13246506896131488, 0.1329405383560041];
+Plotly.plot('div26', data26, layout26, {showLink: false});
+
+var layout30 = clone(layout);
+layout30["title"] = "Delete registry instance - Response time (avg + stddev)";
+var data30 = clone(data);
+data30[0]["y"] = [37.06, 38.76, 38.54, 40.28, 38.18];
+data30[0]["error_y"]["array"] = [7, 5, 9, 8, 10];
+data30[1]["y"] = [0.1324415601615787, 0.1323178380323808, 0.132370032483606, 0.13246506896131488, 0.1329405383560041];
+Plotly.plot('div30', data30, layout30, {showLink: false});
+
+var layout27 = clone(layout);
+layout27["title"] = "Check instance status - Response time (avg + stddev)";
+var data27 = clone(data);
+data27[0]["y"] = [28.05, 32.55, 28.3, 31.34, 29.94];
+data27[0]["error_y"]["array"] = [5, 26, 9, 10, 9];
+data27[1]["y"] = [0.2648831203231574, 0.2646356760647616, 0.264740064967212, 0.26493013792262976, 0.2658810767120082];
+Plotly.plot('div27', data27, layout27, {showLink: false});
+
+var layout28 = clone(layout);
+layout28["title"] = "Get instance url - Response time (avg + stddev)";
+var data28 = clone(data);
+data28[0]["y"] = [25.894152823920265, 27.421926910299003, 25.740265780730898, 27.433953488372094, 25.9821926910299];
+data28[0]["error_y"]["array"] = [4, 6, 4, 4, 5];
+data28[1]["y"] = [39.864909608635195, 39.82766924774663, 39.843379777565396, 39.87198575735578, 40.01510204515724];
+Plotly.plot('div28', data28, layout28, {showLink: false});
+
+var layout29 = clone(layout);
+layout29["title"] = "Get list of registry instances - Response time (avg + stddev)";
+var data29 = clone(data);
+data29[0]["y"] = [25.169733333333333, 26.508133333333333, 25.0398, 26.653333333333332, 25.323];
+data29[0]["error_y"]["array"] = [4, 5, 4, 4, 5];
+data29[1]["y"] = [39.73246804847361, 39.69535140971425, 39.711009745081796, 39.73952068839447, 39.88216150680124];
+Plotly.plot('div29', data29, layout29, {showLink: false});
+
+
+
+</script>
+
