@@ -1,0 +1,10 @@
+{
+  "simulation": "simulations.ControlPlaneSimulation",
+  "simulationId": "controlplanesimulation",
+  "start": 1642052531350,
+  "description": "",
+  "scenarios": ["Basic Control Plane Simulation"],
+  "assertions": [
+
+  ]
+}
