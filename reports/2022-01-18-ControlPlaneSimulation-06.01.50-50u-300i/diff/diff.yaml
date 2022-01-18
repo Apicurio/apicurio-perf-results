@@ -1,0 +1,233 @@
+throughput:
+gain: -0.97
+status: loose
+
+average:
+gain: +13.83
+status: loose
+
+ref:
+simulation: simulations.ControlPlaneSimulation
+start: 2022-01-14 05:43:27
+duration: 378.7
+throughput: 79.9
+averageMs: 28.1
+count: 30249
+successCount: 30249
+errorCount: 0
+apdex:
+t: 1.5
+rating: Excellent
+score: 1.0
+min: 18
+max: 650
+p50: 26
+p95: 39
+p99: 52
+avg: 28.117359251545505
+
+# Request mapping
+requests:
+  - Get list of registry instances:
+  name: Get list of registry instances
+  averageMs: 27.0
+  stddev: 6
+  rps: 39.60678384993781
+  count: 15000
+  successCount: 15000
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 18
+  max: 247
+  p50: 26
+  p95: 38
+  p99: 49
+  avg: 27.040066666666668
+  - Get instance url:
+  name: Get instance url
+  averageMs: 27.8
+  stddev: 8
+  rps: 39.738806462770945
+  count: 15050
+  successCount: 15050
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 18
+  max: 311
+  p50: 26
+  p95: 39
+  p99: 52
+  avg: 27.78810631229236
+  - Check instance status:
+  name: Check instance status
+  averageMs: 29.5
+  stddev: 7
+  rps: 0.26140477340958956
+  count: 99
+  successCount: 99
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 20
+  max: 90
+  p50: 28
+  p95: 39
+  p99: 90
+  avg: 29.535353535353536
+  - Delete registry instance:
+  name: Delete registry instance
+  averageMs: 36.2
+  stddev: 5
+  rps: 0.13202261283312605
+  count: 50
+  successCount: 50
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 27
+  max: 52
+  p50: 36
+  p95: 47
+  p99: 52
+  avg: 36.18
+  - Create registry instance:
+  name: Create registry instance
+  averageMs: 439.5
+  stddev: 65
+  rps: 0.13202261283312605
+  count: 50
+  successCount: 50
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 345
+  max: 650
+  p50: 426
+  p95: 598
+  p99: 650
+  avg: 439.54
+
+challenger:
+simulation: simulations.ControlPlaneSimulation
+start: 2022-01-18 05:54:49
+duration: 382.4
+throughput: 79.1
+averageMs: 32.0
+count: 30250
+successCount: 30250
+errorCount: 0
+apdex:
+t: 1.5
+rating: Excellent
+score: 1.0
+min: 19
+max: 945
+p50: 30
+p95: 44
+p99: 58
+avg: 32.005223140495865
+
+# Request mapping
+requests:
+  - Get list of registry instances:
+  name: Get list of registry instances
+  averageMs: 30.8
+  stddev: 7
+  rps: 39.22112083504381
+  count: 15000
+  successCount: 15000
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 19
+  max: 194
+  p50: 29
+  p95: 43
+  p99: 55
+  avg: 30.808133333333334
+  - Get instance url:
+  name: Get instance url
+  averageMs: 31.8
+  stddev: 8
+  rps: 39.351857904493954
+  count: 15050
+  successCount: 15050
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 19
+  max: 246
+  p50: 30
+  p95: 45
+  p99: 58
+  avg: 31.781528239202657
+  - Check instance status:
+  name: Check instance status
+  averageMs: 32.8
+  stddev: 8
+  rps: 0.2614741389002921
+  count: 100
+  successCount: 100
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 22
+  max: 74
+  p50: 30
+  p95: 46
+  p99: 73
+  avg: 32.83
+  - Delete registry instance:
+  name: Delete registry instance
+  averageMs: 45.2
+  stddev: 11
+  rps: 0.13073706945014604
+  count: 50
+  successCount: 50
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 28
+  max: 80
+  p50: 43
+  p95: 74
+  p99: 80
+  avg: 45.18
+  - Create registry instance:
+  name: Create registry instance
+  averageMs: 443.6
+  stddev: 107
+  rps: 0.13073706945014604
+  count: 50
+  successCount: 50
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 326
+  max: 945
+  p50: 417
+  p95: 685
+  p99: 945
+  avg: 443.64
