@@ -1,0 +1,143 @@
+throughput:
+gain: -100.00
+status: loose
+
+average:
+gain: NaN
+status: loose
+
+ref:
+simulation: simulations.ControlPlaneSimulation
+start: 2022-01-20 05:45:22
+duration: 380.5
+throughput: 79.5
+averageMs: 30.7
+count: 30249
+successCount: 30249
+errorCount: 0
+apdex:
+t: 1.5
+rating: Excellent
+score: 1.0
+min: 19
+max: 625
+p50: 29
+p95: 43
+p99: 55
+avg: 30.664220304803465
+
+# Request mapping
+requests:
+  - Get list of registry instances:
+  name: Get list of registry instances
+  averageMs: 29.7
+  stddev: 6
+  rps: 39.42233143668116
+  count: 15000
+  successCount: 15000
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 19
+  max: 129
+  p50: 28
+  p95: 42
+  p99: 53
+  avg: 29.727133333333335
+  - Get instance url:
+  name: Get instance url
+  averageMs: 30.3
+  stddev: 6
+  rps: 39.55373920813677
+  count: 15050
+  successCount: 15050
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 19
+  max: 114
+  p50: 29
+  p95: 43
+  p99: 55
+  avg: 30.26770764119601
+  - Check instance status:
+  name: Check instance status
+  averageMs: 30.4
+  stddev: 5
+  rps: 0.2601873874820957
+  count: 99
+  successCount: 99
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 21
+  max: 60
+  p50: 30
+  p95: 40
+  p99: 60
+  avg: 30.383838383838384
+  - Delete registry instance:
+  name: Delete registry instance
+  averageMs: 38.9
+  stddev: 7
+  rps: 0.1314077714556039
+  count: 50
+  successCount: 50
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 29
+  max: 66
+  p50: 39
+  p95: 53
+  p99: 66
+  avg: 38.9
+  - Create registry instance:
+  name: Create registry instance
+  averageMs: 423.5
+  stddev: 54
+  rps: 0.1314077714556039
+  count: 50
+  successCount: 50
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 350
+  max: 625
+  p50: 409
+  p95: 572
+  p99: 625
+  avg: 423.46
+
+challenger:
+simulation: simulations.ControlPlaneSimulation
+start: 2022-01-21 05:44:53
+duration: -1642743894.0
+throughput: -0.0
+averageMs: NaN
+count: 0
+successCount: 0
+errorCount: 0
+apdex:
+t: 1.5
+rating: Unacceptable
+score: 0.0
+min: 0
+max: 0
+p50: 0
+p95: 0
+p99: 0
+avg: NaN
+
+# Request mapping
+requests:
