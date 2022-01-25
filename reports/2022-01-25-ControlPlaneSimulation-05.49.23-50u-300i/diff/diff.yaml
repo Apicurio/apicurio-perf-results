@@ -1,0 +1,53 @@
+throughput:
+gain: NaN
+status: loose
+
+average:
+gain: NaN
+status: loose
+
+ref:
+simulation: simulations.ControlPlaneSimulation
+start: 2022-01-21 05:44:53
+duration: -1642743894.0
+throughput: -0.0
+averageMs: NaN
+count: 0
+successCount: 0
+errorCount: 0
+apdex:
+t: 1.5
+rating: Unacceptable
+score: 0.0
+min: 0
+max: 0
+p50: 0
+p95: 0
+p99: 0
+avg: NaN
+
+# Request mapping
+requests:
+
+challenger:
+simulation: simulations.ControlPlaneSimulation
+start: 2022-01-25 05:42:24
+duration: -1643089344.5
+throughput: -0.0
+averageMs: NaN
+count: 0
+successCount: 0
+errorCount: 0
+apdex:
+t: 1.5
+rating: Unacceptable
+score: 0.0
+min: 0
+max: 0
+p50: 0
+p95: 0
+p99: 0
+avg: NaN
+
+# Request mapping
+requests:
