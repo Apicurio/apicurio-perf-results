@@ -1,0 +1,53 @@
+throughput:
+gain: NaN
+status: loose
+
+average:
+gain: NaN
+status: loose
+
+ref:
+simulation: simulations.End2EndSimulation
+start: 2022-01-21 07:05:14
+duration: -1642748714.3
+throughput: -0.0
+averageMs: NaN
+count: 0
+successCount: 0
+errorCount: 0
+apdex:
+t: 1.5
+rating: Unacceptable
+score: 0.0
+min: 0
+max: 0
+p50: 0
+p95: 0
+p99: 0
+avg: NaN
+
+# Request mapping
+requests:
+
+challenger:
+simulation: simulations.End2EndSimulation
+start: 2022-01-25 07:04:39
+duration: -1643094279.0
+throughput: -0.0
+averageMs: NaN
+count: 0
+successCount: 0
+errorCount: 0
+apdex:
+t: 1.5
+rating: Unacceptable
+score: 0.0
+min: 0
+max: 0
+p50: 0
+p95: 0
+p99: 0
+avg: NaN
+
+# Request mapping
+requests:
