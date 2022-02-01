@@ -6,11 +6,16 @@ if [[ ! -f $REPORT_JAR ]] ; then
     mv gatling-report-6.0-capsule-fat.jar $REPORT_JAR
 fi
 
-# Currently only processing all tests configured with 10u-600i
-# that means 10 users with 600 iterations
+# Currently only processing all tests configured with 10u-600i and 30u-600i
+# i.e. 10u means 10 users and 600i means 600 iterations
+E2E_SIMULATIONS_TO_ANALYZE="10u-600i 30u-600i"
+
 E2E_TESTS_LOG_FILES=""
-for logfile in $(find **/End2EndSimulation/*10u-600i/simulation.log) ; do
-    E2E_TESTS_LOG_FILES="$E2E_TESTS_LOG_FILES $logfile"
+for simulation in $E2E_SIMULATIONS_TO_ANALYZE ; do
+    echo "simulation $simulation will be analyzed"
+    for logfile in $(find **/End2EndSimulation/*$simulation/simulation.log) ; do
+        E2E_TESTS_LOG_FILES="$E2E_TESTS_LOG_FILES $logfile"
+    done
 done
 
 mkdir -p reports
