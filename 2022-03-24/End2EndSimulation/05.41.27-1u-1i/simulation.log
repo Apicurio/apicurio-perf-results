@@ -1,0 +1,13 @@
+RUN	simulations.End2EndSimulation	end2endsimulation	1648100433403	 	3.5.1
+USER	E2E Service Registry Simulation	START	1648100434378
+REQUEST		Create registry instance	1648100434537	1648100435046	OK	 
+REQUEST		Check instance status	1648100435115	1648100435146	OK	 
+REQUEST		Check instance status	1648100436155	1648100436196	OK	 
+REQUEST		Get instance url	1648100436201	1648100436239	OK	 
+ERROR	Get Developer principalId: Failed to build request: No attribute named 'dev_auth_token' is defined 	1648100436461
+ERROR	Grant access to Developer principalId: Failed to build request: No attribute named 'dev_principal_id' is defined 	1648100436539
+ERROR	Create artifact: Failed to build request: No attribute named 'dev_auth_token' is defined 	1648100436541
+ERROR	Search artifacts: Failed to build request: No attribute named 'dev_auth_token' is defined 	1648100436542
+ERROR	Get artifact by ID: Failed to build request: No attribute named 'globalId' is defined 	1648100436601
+REQUEST		Delete registry instance	1648100437103	1648100437143	OK	 
+USER	E2E Service Registry Simulation	END	1648100437147
