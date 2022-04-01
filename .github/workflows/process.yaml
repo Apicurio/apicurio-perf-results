@@ -18,10 +18,10 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
 
-      - name: Set up JDK 11
+      - name: Set up JDK 8
         uses: AdoptOpenJDK/install-jdk@v1
         with:
-          version: '11'
+          version: '8'
           architecture: x64
 
       - name: Generate report
