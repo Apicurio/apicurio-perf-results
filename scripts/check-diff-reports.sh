@@ -26,7 +26,7 @@ for file in $MODIFIED_FILES ; do
         THROUGHPUT_CHANGE=$(awk '{if(NR==2) print $0}' $file | yq read - gain)
         # read response time average percetage change, located in line 6
         RESPONSE_TIME_AVG_CHANGE=$(awk '{if(NR==6) print $0}' $file | yq read - gain)
-        
+
         SEND_ALARM="false"
 
         # throughput is better when it increases, so we check if the current value is less than the limit we set to detect changes for the worse
@@ -73,11 +73,11 @@ for file in $MODIFIED_FILES ; do
 
             cat msg.json
 
-            if [[ ! -z $GOOGLE_CHAT_WEBHOOK ]]; then
-                curl -i $GOOGLE_CHAT_WEBHOOK -X POST -H "Content-Type: application/json" --data-binary @msg.json
-            else
-                echo "GOOGLE_CHAT_WEBHOOK not set, skipping notification send"
-            fi
+#            if [[ ! -z $GOOGLE_CHAT_WEBHOOK ]]; then
+#                curl -i $GOOGLE_CHAT_WEBHOOK -X POST -H "Content-Type: application/json" --data-binary @msg.json
+#            else
+#                echo "GOOGLE_CHAT_WEBHOOK not set, skipping notification send"
+#            fi
 
         fi
 
