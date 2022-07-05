@@ -1,0 +1,377 @@
+throughput:
+gain: -7.56
+status: loose
+
+average:
+gain: -1.01
+status: win
+
+ref:
+simulation: simulations.End2EndSimulation
+start: 2022-07-01 07:38:13
+duration: 376.8
+throughput: 48.5
+averageMs: 53.4
+count: 18270
+successCount: 18268
+errorCount: 2
+apdex:
+t: 1.5
+rating: Excellent
+score: 1.0
+min: 13
+max: 1073
+p50: 48
+p95: 93
+p99: 181
+avg: 53.389162561576356
+
+# Request mapping
+requests:
+  - Get instance url:
+  name: Get instance url
+  averageMs: 25.8
+  stddev: 15
+  rps: 0.0796093832926441
+  count: 30
+  successCount: 30
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 16
+  max: 95
+  p50: 22
+  p95: 75
+  p99: 95
+  avg: 25.833333333333332
+  - Check instance status:
+  name: Check instance status
+  averageMs: 27.1
+  stddev: 12
+  rps: 0.1592187665852882
+  count: 60
+  successCount: 60
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 16
+  max: 99
+  p50: 24
+  p95: 51
+  p99: 99
+  avg: 27.083333333333332
+  - Grant access to Developer principalId:
+  name: Grant access to Developer principalId
+  averageMs: 42.6
+  stddev: 13
+  rps: 0.0796093832926441
+  count: 30
+  successCount: 30
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 16
+  max: 95
+  p50: 40
+  p95: 77
+  p99: 95
+  avg: 42.63333333333333
+  - Search artifacts:
+  name: Search artifacts
+  averageMs: 47.6
+  stddev: 11
+  rps: 0.0796093832926441
+  count: 30
+  successCount: 30
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 24
+  max: 70
+  p50: 44
+  p95: 69
+  p99: 70
+  avg: 47.56666666666667
+  - Create registry instance:
+  name: Create registry instance
+  averageMs: 52.0
+  stddev: 10
+  rps: 0.0796093832926441
+  count: 30
+  successCount: 30
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 38
+  max: 85
+  p50: 47
+  p95: 75
+  p99: 85
+  avg: 52.0
+  - Delete registry instance:
+  name: Delete registry instance
+  averageMs: 53.1
+  stddev: 19
+  rps: 0.0796093832926441
+  count: 30
+  successCount: 30
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 37
+  max: 118
+  p50: 46
+  p95: 116
+  p99: 118
+  avg: 53.1
+  - Get artifact by ID:
+  name: Get artifact by ID
+  averageMs: 53.4
+  stddev: 28
+  rps: 47.76032268336695
+  count: 18000
+  successCount: 17998
+  errorCount: 2
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 13
+  max: 1073
+  p50: 48
+  p95: 93
+  p99: 181
+  avg: 53.43688888888889
+  - Create artifact:
+  name: Create artifact
+  averageMs: 60.3
+  stddev: 20
+  rps: 0.0796093832926441
+  count: 30
+  successCount: 30
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 42
+  max: 121
+  p50: 54
+  p95: 116
+  p99: 121
+  avg: 60.266666666666666
+  - Get Developer principalId:
+  name: Get Developer principalId
+  averageMs: 116.3
+  stddev: 62
+  rps: 0.0796093832926441
+  count: 30
+  successCount: 30
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 75
+  max: 320
+  p50: 90
+  p95: 310
+  p99: 320
+  avg: 116.3
+
+challenger:
+simulation: simulations.End2EndSimulation
+start: 2022-07-05 07:37:59
+duration: 380.5
+throughput: 44.8
+averageMs: 52.8
+count: 17078
+successCount: 17051
+errorCount: 27
+apdex:
+t: 1.5
+rating: Excellent
+score: 0.99991214
+min: 14
+max: 2764
+p50: 48
+p95: 77
+p99: 184
+avg: 52.847288909708396
+
+# Request mapping
+requests:
+  - Get instance url:
+  name: Get instance url
+  averageMs: 24.0
+  stddev: 14
+  rps: 0.0735897058514329
+  count: 30
+  successCount: 28
+  errorCount: 2
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 14
+  max: 99
+  p50: 21
+  p95: 61
+  p99: 99
+  avg: 24.0
+  - Check instance status:
+  name: Check instance status
+  averageMs: 24.8
+  stddev: 13
+  rps: 0.1471794117028658
+  count: 76
+  successCount: 56
+  errorCount: 20
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 14
+  max: 99
+  p50: 21
+  p95: 42
+  p99: 99
+  avg: 24.842105263157894
+  - Grant access to Developer principalId:
+  name: Grant access to Developer principalId
+  averageMs: 41.0
+  stddev: 5
+  rps: 0.0735897058514329
+  count: 28
+  successCount: 28
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 32
+  max: 60
+  p50: 41
+  p95: 54
+  p99: 60
+  avg: 40.964285714285715
+  - Delete registry instance:
+  name: Delete registry instance
+  averageMs: 45.0
+  stddev: 8
+  rps: 0.0735897058514329
+  count: 30
+  successCount: 28
+  errorCount: 2
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 29
+  max: 66
+  p50: 42
+  p95: 63
+  p99: 66
+  avg: 45.0
+  - Search artifacts:
+  name: Search artifacts
+  averageMs: 47.5
+  stddev: 7
+  rps: 0.0735897058514329
+  count: 28
+  successCount: 28
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 37
+  max: 65
+  p50: 45
+  p95: 62
+  p99: 65
+  avg: 47.535714285714285
+  - Get artifact by ID:
+  name: Get artifact by ID
+  averageMs: 52.0
+  stddev: 23
+  rps: 44.15119530707933
+  count: 16800
+  successCount: 16799
+  errorCount: 1
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 15
+  max: 450
+  p50: 48
+  p95: 75
+  p99: 177
+  avg: 52.00946428571429
+  - Create artifact:
+  name: Create artifact
+  averageMs: 60.7
+  stddev: 16
+  rps: 0.0735897058514329
+  count: 28
+  successCount: 28
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 45
+  max: 120
+  p50: 54
+  p95: 114
+  p99: 120
+  avg: 60.67857142857143
+  - Get Developer principalId:
+  name: Get Developer principalId
+  averageMs: 110.5
+  stddev: 36
+  rps: 0.0735897058514329
+  count: 28
+  successCount: 28
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 82
+  max: 233
+  p50: 97
+  p95: 223
+  p99: 233
+  avg: 110.5
+  - Create registry instance:
+  name: Create registry instance
+  averageMs: 584.6
+  stddev: 614
+  rps: 0.0735897058514329
+  count: 30
+  successCount: 28
+  errorCount: 2
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 0.95
+  min: 214
+  max: 2764
+  p50: 334
+  p95: 2345
+  p99: 2764
+  avg: 584.6
