@@ -1,0 +1,13 @@
+RUN	simulations.End2EndSimulation	end2endsimulation	1664257338234	 	3.5.1
+USER	E2E Service Registry Simulation	START	1664257338896
+REQUEST		Create registry instance	1664257339003	1664257339661	OK	 
+REQUEST		Check instance status	1664257339704	1664257339727	OK	 
+REQUEST		Check instance status	1664257340730	1664257340754	OK	 
+REQUEST		Get instance url	1664257340757	1664257340784	OK	 
+REQUEST		Get Developer principalId	1664257340929	1664257341175	KO	status.find.is(200), but actually found 401
+ERROR	Grant access to Developer principalId: Failed to build request: No attribute named 'dev_principal_id' is defined 	1664257341226
+REQUEST		Create artifact	1664257341228	1664257341323	KO	status.find.in(200,201,202,203,204,205,206,207,208,209,304), found 401
+REQUEST		Search artifacts	1664257341325	1664257341420	KO	status.find.is(200), but actually found 401
+ERROR	Get artifact by ID: Failed to build request: No attribute named 'globalId' is defined 	1664257341422
+REQUEST		Delete registry instance	1664257341923	1664257341970	OK	 
+USER	E2E Service Registry Simulation	END	1664257341973
