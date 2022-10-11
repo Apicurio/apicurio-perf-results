@@ -1,0 +1,21 @@
+RUN	simulations.End2EndSimulation	end2endsimulation	1665466809614	 	3.5.1
+USER	E2E Service Registry Simulation	START	1665466810316
+REQUEST		Create registry instance	1665466810432	1665466810987	OK	 
+REQUEST		Check instance status	1665466811029	1665466811057	OK	 
+REQUEST		Check instance status	1665466812060	1665466812086	OK	 
+REQUEST		Check instance status	1665466813087	1665466813114	OK	 
+REQUEST		Check instance status	1665466814115	1665466814132	OK	 
+REQUEST		Check instance status	1665466815134	1665466815156	OK	 
+REQUEST		Check instance status	1665466816157	1665466816180	OK	 
+REQUEST		Check instance status	1665466817182	1665466817205	OK	 
+REQUEST		Check instance status	1665466818206	1665466818232	OK	 
+REQUEST		Check instance status	1665466819234	1665466819256	OK	 
+REQUEST		Check instance status	1665466820257	1665466820276	OK	 
+REQUEST		Get instance url	1665466821279	1665466821299	KO	jsonPath($.registryUrl).find.exists, found nothing
+ERROR	Get Developer principalId: Failed to build request: No attribute named 'instance_url' is defined 	1665466821440
+ERROR	Grant access to Developer principalId: Failed to build request: No attribute named 'instance_url' is defined 	1665466821471
+ERROR	Create artifact: Failed to build request: No attribute named 'instance_url' is defined 	1665466821471
+ERROR	Search artifacts: Failed to build request: No attribute named 'instance_url' is defined 	1665466821472
+ERROR	Get artifact by ID: Failed to build request: No attribute named 'instance_url' is defined 	1665466821473
+REQUEST		Delete registry instance	1665466821974	1665466822008	OK	 
+USER	E2E Service Registry Simulation	END	1665466822010
