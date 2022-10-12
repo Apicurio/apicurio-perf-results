@@ -1,0 +1,251 @@
+throughput:
+gain: -60.86
+status: loose
+
+average:
+gain: +2.29
+status: loose
+
+ref:
+simulation: simulations.End2EndSimulation
+start: 2022-10-11 07:40:30
+duration: 361.5
+throughput: 1.0
+averageMs: 202.8
+count: 390
+successCount: 360
+errorCount: 30
+apdex:
+t: 1.5
+rating: Excellent
+score: 0.9807692
+min: 14
+max: 11547
+p50: 19
+p95: 549
+p99: 7183
+avg: 202.78205128205127
+
+# Request mapping
+requests:
+  - Get instance url:
+  name: Get instance url
+  averageMs: 18.5
+  stddev: 2
+  rps: 0.0
+  count: 30
+  successCount: 0
+  errorCount: 30
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 15
+  max: 27
+  p50: 18
+  p95: 24
+  p99: 27
+  avg: 18.5
+  - Check instance status:
+  name: Check instance status
+  averageMs: 22.4
+  stddev: 14
+  rps: 0.8299512818597549
+  count: 300
+  successCount: 300
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 14
+  max: 145
+  p50: 19
+  p95: 39
+  p99: 97
+  avg: 22.416666666666668
+  - Delete registry instance:
+  name: Delete registry instance
+  averageMs: 46.3
+  stddev: 22
+  rps: 0.08299512818597549
+  count: 30
+  successCount: 30
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 30
+  max: 155
+  p50: 40
+  p95: 113
+  p99: 155
+  avg: 46.333333333333336
+  - Create registry instance:
+  name: Create registry instance
+  averageMs: 2347.2
+  stddev: 3138
+  rps: 0.08299512818597549
+  count: 30
+  successCount: 30
+  errorCount: 0
+  apdex:
+  t: 1.5
+  rating: Fair
+  score: 0.75
+  min: 242
+  max: 11547
+  p50: 1188
+  p95: 10401
+  p99: 11547
+  avg: 2347.1666666666665
+
+challenger:
+simulation: simulations.End2EndSimulation
+start: 2022-10-12 07:39:58
+duration: 346.3
+throughput: 0.4
+averageMs: 207.4
+count: 255
+successCount: 135
+errorCount: 120
+apdex:
+t: 1.5
+rating: Excellent
+score: 0.9843137
+min: 14
+max: 8973
+p50: 41
+p95: 395
+p99: 6250
+avg: 207.42352941176472
+
+# Request mapping
+requests:
+  - Get instance url:
+  name: Get instance url
+  averageMs: 19.3
+  stddev: 3
+  rps: 0.07796888175297148
+  count: 30
+  successCount: 27
+  errorCount: 3
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 14
+  max: 28
+  p50: 19
+  p95: 26
+  p99: 28
+  avg: 19.333333333333332
+  - Check instance status:
+  name: Check instance status
+  averageMs: 23.9
+  stddev: 16
+  rps: 0.15593776350594296
+  count: 84
+  successCount: 54
+  errorCount: 30
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 15
+  max: 166
+  p50: 20
+  p95: 32
+  p99: 166
+  avg: 23.904761904761905
+  - Delete registry instance:
+  name: Delete registry instance
+  averageMs: 42.0
+  stddev: 15
+  rps: 0.07796888175297148
+  count: 30
+  successCount: 27
+  errorCount: 3
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 24
+  max: 115
+  p50: 39
+  p95: 80
+  p99: 115
+  avg: 42.0
+  - Create artifact:
+  name: Create artifact
+  averageMs: 102.5
+  stddev: 20
+  rps: 0.0
+  count: 27
+  successCount: 0
+  errorCount: 27
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 85
+  max: 171
+  p50: 93
+  p95: 163
+  p99: 171
+  avg: 102.51851851851852
+  - Search artifacts:
+  name: Search artifacts
+  averageMs: 104.6
+  stddev: 23
+  rps: 0.0
+  count: 27
+  successCount: 0
+  errorCount: 27
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 86
+  max: 172
+  p50: 97
+  p95: 171
+  p99: 172
+  avg: 104.55555555555556
+  - Get Developer principalId:
+  name: Get Developer principalId
+  averageMs: 137.3
+  stddev: 41
+  rps: 0.0
+  count: 27
+  successCount: 0
+  errorCount: 27
+  apdex:
+  t: 1.5
+  rating: Excellent
+  score: 1.0
+  min: 103
+  max: 253
+  p50: 123
+  p95: 242
+  p99: 253
+  avg: 137.25925925925927
+  - Create registry instance:
+  name: Create registry instance
+  averageMs: 1324.9
+  stddev: 2263
+  rps: 0.07796888175297148
+  count: 30
+  successCount: 27
+  errorCount: 3
+  apdex:
+  t: 1.5
+  rating: Good
+  score: 0.8666667
+  min: 218
+  max: 8973
+  p50: 346
+  p95: 8635
+  p99: 8973
+  avg: 1324.9333333333334
