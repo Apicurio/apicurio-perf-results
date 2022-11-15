@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style media="screen" type="text/css">
+    th {text-align:left}
+    td {text-align:right}
+    td.win {background-color: chartreuse;}
+    td.loose {background-color: darksalmon;}
+
+  </style>
+</head>
+
+<h1> Diff report</h1>
+<div id="summaryDiv">
+  <table id="summaryTab">
+    <tr>
+      <td></td>
+      <th>Reference</th>
+      <th>Challenger</th>
+      <th></th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <td>2022-11-11 07:39:57</td>
+      <td>2022-11-15 07:40:08</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Simulation</th>
+      <td>simulations.End2EndSimulation</td>
+      <td>simulations.End2EndSimulation</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Duration (s)</th>
+      <td>345.2</td>
+      <td>345.5</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Throughput requests/s</th>
+      <td>0.4</td>
+      <td>0.4</td>
+      <td class="loose">-0.73 %</td>
+    </tr>
+    <tr>
+      <th>Average response time ms</th>
+      <td>83.2</td>
+      <td>82.8</td>
+      <td class="win">-0.45 %</td>
+    </tr>
+    <tr>
+      <th>Requests</th>
+      <td>240</td>
+      <td>249</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Error(s)</th>
+      <td>90</td>
+      <td>100</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Max concurrent users</th>
+      <td>30</td>
+      <td>30</td>
+      <td></td>
+    </tr>
+  </table>
+</div>
+
+<div id="responseAllDiv"></div>
+  <div id="response2Div"></div>
+  <div id="response5Div"></div>
+  <div id="response7Div"></div>
+  <div id="response6Div"></div>
+  <div id="response8Div"></div>
+  <div id="response3Div"></div>
+  <div id="response4Div"></div>
+
+
+<div id="monitoring">
+  <table>
+    <tr>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+<script>
+
+var dataAll = [
+  {
+    y: [321.0, 95.0, 284.0, 25.0, 28.0, 24.0, 180.0, 75.0, 22.0, 27.0, 72.0, 188.0, 64.0, 70.0, 416.0, 26.0, 265.0, 26.0, 18.0, 18.0, 94.0, 65.0, 71.0, 28.0, 18.0, 157.0, 61.0, 68.0, 355.0, 27.0, 453.0, 92.0, 35.0, 61.0, 91.0, 71.0, 73.0, 20.0, 26.0, 91.0, 65.0, 57.0, 328.0, 19.0, 242.0, 19.0, 22.0, 18.0, 84.0, 92.0, 62.0, 23.0, 14.0, 93.0, 130.0, 101.0, 234.0, 20.0, 278.0, 26.0, 22.0, 21.0, 142.0, 62.0, 64.0, 19.0, 20.0, 130.0, 93.0, 64.0, 227.0, 23.0, 24.0, 17.0, 81.0, 93.0, 499.0, 16.0, 68.0, 18.0, 23.0, 104.0, 61.0, 70.0, 281.0, 20.0, 279.0, 22.0, 20.0, 15.0, 87.0, 70.0, 73.0, 23.0, 23.0, 84.0, 68.0, 68.0, 314.0, 27.0, 291.0, 18.0, 13.0, 15.0, 92.0, 68.0, 99.0, 21.0, 22.0, 108.0, 69.0, 72.0, 298.0, 14.0, 220.0, 21.0, 19.0, 16.0, 85.0, 74.0, 75.0, 16.0, 15.0, 192.0, 59.0, 97.0, 227.0, 16.0, 27.0, 274.0, 14.0, 24.0, 86.0, 75.0, 76.0, 20.0, 15.0, 114.0, 68.0, 109.0, 350.0, 20.0, 310.0, 21.0, 15.0, 17.0, 82.0, 63.0, 63.0, 18.0, 17.0, 116.0, 74.0, 88.0, 338.0, 35.0, 240.0, 15.0, 22.0, 19.0, 92.0, 74.0, 77.0, 19.0, 25.0, 128.0, 82.0, 78.0, 225.0, 28.0, 239.0, 13.0, 19.0, 17.0, 88.0, 102.0, 83.0, 21.0, 12.0, 92.0, 65.0, 58.0, 268.0, 17.0, 262.0, 21.0, 15.0, 21.0, 82.0, 69.0, 60.0, 16.0, 16.0, 93.0, 92.0, 150.0, 241.0, 23.0, 258.0, 16.0, 19.0, 14.0, 183.0, 109.0, 82.0, 19.0, 17.0, 77.0, 59.0, 61.0, 58.0, 42.0, 65.0, 38.0, 39.0, 38.0, 46.0, 43.0, 43.0, 35.0, 41.0, 44.0, 37.0, 44.0, 35.0, 29.0, 35.0, 39.0, 40.0, 40.0, 43.0, 57.0, 42.0, 38.0, 35.0, 38.0, 41.0, 35.0, 51.0, 39.0],
+    name: 'Reference: 83.2ms',
+    boxpoints: 'all',
+    jitter: 0.3,
+    pointpos: -1.8,
+    boxmean: 'sd',
+    type: 'box',
+    marker:{
+      size:2,
+      opacity:0.6
+    }
+  },
+  {
+    y: [87.0, 27.0, 21.0, 613.0, 24.0, 25.0, 27.0, 23.0, 185.0, 79.0, 66.0, 29.0, 386.0, 24.0, 16.0, 22.0, 25.0, 499.0, 94.0, 179.0, 88.0, 77.0, 22.0, 25.0, 365.0, 16.0, 16.0, 18.0, 20.0, 19.0, 428.0, 18.0, 26.0, 98.0, 74.0, 23.0, 66.0, 20.0, 16.0, 27.0, 147.0, 23.0, 62.0, 68.0, 325.0, 23.0, 22.0, 25.0, 15.0, 77.0, 62.0, 69.0, 24.0, 19.0, 451.0, 22.0, 77.0, 20.0, 111.0, 81.0, 17.0, 24.0, 92.0, 68.0, 74.0, 269.0, 27.0, 15.0, 313.0, 16.0, 24.0, 90.0, 72.0, 126.0, 16.0, 17.0, 120.0, 82.0, 93.0, 262.0, 15.0, 235.0, 29.0, 22.0, 16.0, 98.0, 75.0, 69.0, 20.0, 13.0, 144.0, 73.0, 95.0, 263.0, 22.0, 304.0, 19.0, 15.0, 21.0, 91.0, 79.0, 155.0, 22.0, 19.0, 81.0, 69.0, 89.0, 278.0, 16.0, 251.0, 14.0, 16.0, 20.0, 95.0, 65.0, 65.0, 14.0, 16.0, 90.0, 77.0, 68.0, 297.0, 21.0, 262.0, 13.0, 16.0, 14.0, 90.0, 63.0, 142.0, 18.0, 17.0, 91.0, 77.0, 75.0, 242.0, 25.0, 264.0, 15.0, 14.0, 24.0, 99.0, 71.0, 75.0, 18.0, 17.0, 88.0, 83.0, 79.0, 214.0, 23.0, 248.0, 23.0, 20.0, 20.0, 101.0, 60.0, 60.0, 16.0, 15.0, 91.0, 61.0, 76.0, 309.0, 19.0, 343.0, 16.0, 16.0, 20.0, 117.0, 64.0, 84.0, 18.0, 14.0, 105.0, 73.0, 71.0, 433.0, 20.0, 240.0, 18.0, 17.0, 17.0, 128.0, 68.0, 74.0, 19.0, 18.0, 80.0, 62.0, 62.0, 289.0, 17.0, 17.0, 330.0, 15.0, 24.0, 173.0, 106.0, 113.0, 20.0, 13.0, 170.0, 124.0, 121.0, 228.0, 18.0, 13.0, 18.0, 307.0, 20.0, 108.0, 85.0, 77.0, 19.0, 17.0, 78.0, 125.0, 151.0, 62.0, 42.0, 45.0, 47.0, 45.0, 29.0, 45.0, 45.0, 43.0, 42.0, 43.0, 40.0, 36.0, 39.0, 39.0, 33.0, 35.0, 31.0, 63.0, 44.0, 37.0, 37.0, 56.0, 43.0, 39.0, 41.0, 42.0, 40.0, 44.0, 45.0],
+    name: 'Challenger: 82.8ms',
+    boxpoints: 'all',
+    jitter: 0.3,
+    pointpos: -1.8,
+    boxmean: 'sd',
+    type: 'box',
+    marker:{
+      size:2,
+      opacity:0.6
+    }
+  }
+];
+var layoutAll = {
+  height: 500,
+  width: 900,
+  yaxis: {
+    title: 'Time ms',
+    type: 'log'
+  },
+  showlegend: true,
+  xaxis: {
+      showticklabels: false
+  },
+  title: 'Response time all requests'
+};
+Plotly.newPlot('responseAllDiv', dataAll, layoutAll);
+
+var data2 = [
+  {
+    y: [321.0, 284.0, 416.0, 265.0, 355.0, 453.0, 328.0, 242.0, 234.0, 278.0, 227.0, 499.0, 281.0, 279.0, 314.0, 291.0, 298.0, 220.0, 227.0, 274.0, 350.0, 310.0, 338.0, 240.0, 225.0, 239.0, 268.0, 262.0, 241.0, 258.0],
+    name: 'Reference: 293.9ms',
+    boxpoints: 'all',
+    jitter: 0.3,
+    pointpos: -1.8,
+    boxmean: 'sd',
+    type: 'box',
+    marker:{
+      size:2,
+      opacity:0.6
+    }
+  },
+  {
+    y: [87.0, 613.0, 386.0, 499.0, 365.0, 428.0, 325.0, 451.0, 269.0, 313.0, 262.0, 235.0, 263.0, 304.0, 278.0, 251.0, 297.0, 262.0, 242.0, 264.0, 214.0, 248.0, 309.0, 343.0, 433.0, 240.0, 289.0, 330.0, 228.0, 307.0],
+    name: 'Challenger: 311.2ms',
+    boxpoints: 'all',
+    jitter: 0.3,
+    pointpos: -1.8,
+    boxmean: 'sd',
+    type: 'box',
+    marker:{
+      size:2,
+      opacity:0.6
+    }
+  }
+];
+var layout2 = {
+  height: 500,
+  width: 900,
+  yaxis: {
+    title: 'Time ms',
+    type: 'log'
+  },
+  showlegend: true,
+  xaxis: {
+      showticklabels: false
+  },
+  title: 'Create registry instance'
+};
+Plotly.newPlot('response2Div', data2, layout2);
+var data5 = [
+  {
+    y: [180.0, 188.0, 94.0, 157.0, 91.0, 91.0, 84.0, 93.0, 142.0, 130.0, 81.0, 104.0, 87.0, 84.0, 92.0, 108.0, 85.0, 192.0, 86.0, 114.0, 82.0, 116.0, 92.0, 128.0, 88.0, 92.0, 82.0, 93.0, 183.0, 77.0],
+    name: 'Reference: 110.5ms',
+    boxpoints: 'all',
+    jitter: 0.3,
+    pointpos: -1.8,
+    boxmean: 'sd',
+    type: 'box',
+    marker:{
+      size:2,
+      opacity:0.6
+    }
+  },
+  {
+    y: [185.0, 179.0, 98.0, 147.0, 77.0, 77.0, 92.0, 90.0, 120.0, 98.0, 144.0, 91.0, 81.0, 95.0, 90.0, 90.0, 91.0, 99.0, 88.0, 101.0, 91.0, 117.0, 105.0, 128.0, 80.0, 173.0, 170.0, 108.0, 78.0],
+    name: 'Challenger: 109.8ms',
+    boxpoints: 'all',
+    jitter: 0.3,
+    pointpos: -1.8,
+    boxmean: 'sd',
+    type: 'box',
+    marker:{
+      size:2,
+      opacity:0.6
+    }
+  }
+];
+var layout5 = {
+  height: 500,
+  width: 900,
+  yaxis: {
+    title: 'Time ms',
+    type: 'log'
+  },
+  showlegend: true,
+  xaxis: {
+      showticklabels: false
+  },
+  title: 'Get Developer principalId'
+};
+Plotly.newPlot('response5Div', data5, layout5);
+var data7 = [
+  {
+    y: [72.0, 70.0, 71.0, 68.0, 73.0, 57.0, 62.0, 101.0, 64.0, 64.0, 68.0, 70.0, 73.0, 68.0, 99.0, 72.0, 75.0, 97.0, 76.0, 109.0, 63.0, 88.0, 77.0, 78.0, 83.0, 58.0, 60.0, 150.0, 82.0, 61.0],
+    name: 'Reference: 77.0ms',
+    boxpoints: 'all',
+    jitter: 0.3,
+    pointpos: -1.8,
+    boxmean: 'sd',
+    type: 'box',
+    marker:{
+      size:2,
+      opacity:0.6
+    }
+  },
+  {
+    y: [66.0, 77.0, 66.0, 68.0, 69.0, 81.0, 74.0, 126.0, 93.0, 69.0, 95.0, 155.0, 89.0, 65.0, 68.0, 142.0, 75.0, 75.0, 79.0, 60.0, 76.0, 84.0, 71.0, 74.0, 62.0, 113.0, 121.0, 77.0, 151.0],
+    name: 'Challenger: 86.9ms',
+    boxpoints: 'all',
+    jitter: 0.3,
+    pointpos: -1.8,
+    boxmean: 'sd',
+    type: 'box',
+    marker:{
+      size:2,
+      opacity:0.6
+    }
+  }
+];
+var layout7 = {
+  height: 500,
+  width: 900,
+  yaxis: {
+    title: 'Time ms',
+    type: 'log'
+  },
+  showlegend: true,
+  xaxis: {
+      showticklabels: false
+  },
+  title: 'Search artifacts'
+};
+Plotly.newPlot('response7Div', data7, layout7);
+var data6 = [
+  {
+    y: [75.0, 64.0, 65.0, 61.0, 71.0, 65.0, 92.0, 130.0, 62.0, 93.0, 93.0, 61.0, 70.0, 68.0, 68.0, 69.0, 74.0, 59.0, 75.0, 68.0, 63.0, 74.0, 74.0, 82.0, 102.0, 65.0, 69.0, 92.0, 109.0, 59.0],
+    name: 'Reference: 75.7ms',
+    boxpoints: 'all',
+    jitter: 0.3,
+    pointpos: -1.8,
+    boxmean: 'sd',
+    type: 'box',
+    marker:{
+      size:2,
+      opacity:0.6
+    }
+  },
+  {
+    y: [79.0, 88.0, 74.0, 62.0, 62.0, 111.0, 68.0, 72.0, 82.0, 75.0, 73.0, 79.0, 69.0, 65.0, 77.0, 63.0, 77.0, 71.0, 83.0, 60.0, 61.0, 64.0, 73.0, 68.0, 62.0, 106.0, 124.0, 85.0, 125.0],
+    name: 'Challenger: 77.9ms',
+    boxpoints: 'all',
+    jitter: 0.3,
+    pointpos: -1.8,
+    boxmean: 'sd',
+    type: 'box',
+    marker:{
+      size:2,
+      opacity:0.6
+    }
+  }
+];
+var layout6 = {
+  height: 500,
+  width: 900,
+  yaxis: {
+    title: 'Time ms',
+    type: 'log'
+  },
+  showlegend: true,
+  xaxis: {
+      showticklabels: false
+  },
+  title: 'Create artifact'
+};
+Plotly.newPlot('response6Div', data6, layout6);
+var data8 = [
+  {
+    y: [58.0, 42.0, 65.0, 38.0, 39.0, 38.0, 46.0, 43.0, 43.0, 35.0, 41.0, 44.0, 37.0, 44.0, 35.0, 29.0, 35.0, 39.0, 40.0, 40.0, 43.0, 57.0, 42.0, 38.0, 35.0, 38.0, 41.0, 35.0, 51.0, 39.0],
+    name: 'Reference: 41.7ms',
+    boxpoints: 'all',
+    jitter: 0.3,
+    pointpos: -1.8,
+    boxmean: 'sd',
+    type: 'box',
+    marker:{
+      size:2,
+      opacity:0.6
+    }
+  },
+  {
+    y: [62.0, 42.0, 45.0, 47.0, 45.0, 29.0, 45.0, 45.0, 43.0, 42.0, 43.0, 40.0, 36.0, 39.0, 39.0, 33.0, 35.0, 31.0, 63.0, 44.0, 37.0, 37.0, 56.0, 43.0, 39.0, 41.0, 42.0, 40.0, 44.0, 45.0],
+    name: 'Challenger: 42.4ms',
+    boxpoints: 'all',
+    jitter: 0.3,
+    pointpos: -1.8,
+    boxmean: 'sd',
+    type: 'box',
+    marker:{
+      size:2,
+      opacity:0.6
+    }
+  }
+];
+var layout8 = {
+  height: 500,
+  width: 900,
+  yaxis: {
+    title: 'Time ms',
+    type: 'log'
+  },
+  showlegend: true,
+  xaxis: {
+      showticklabels: false
+  },
+  title: 'Delete registry instance'
+};
+Plotly.newPlot('response8Div', data8, layout8);
+var data3 = [
+  {
+    y: [95.0, 25.0, 28.0, 22.0, 26.0, 26.0, 18.0, 28.0, 27.0, 92.0, 61.0, 20.0, 19.0, 19.0, 22.0, 23.0, 20.0, 26.0, 22.0, 19.0, 23.0, 24.0, 16.0, 18.0, 20.0, 22.0, 20.0, 23.0, 27.0, 18.0, 13.0, 21.0, 14.0, 21.0, 19.0, 16.0, 16.0, 27.0, 24.0, 20.0, 20.0, 21.0, 15.0, 18.0, 35.0, 15.0, 22.0, 19.0, 28.0, 13.0, 19.0, 21.0, 17.0, 21.0, 15.0, 16.0, 23.0, 16.0, 19.0, 19.0],
+    name: 'Reference: 23.9ms',
+    boxpoints: 'all',
+    jitter: 0.3,
+    pointpos: -1.8,
+    boxmean: 'sd',
+    type: 'box',
+    marker:{
+      size:2,
+      opacity:0.6
+    }
+  },
+  {
+    y: [27.0, 21.0, 24.0, 25.0, 27.0, 29.0, 24.0, 16.0, 22.0, 94.0, 22.0, 25.0, 16.0, 16.0, 18.0, 20.0, 18.0, 26.0, 23.0, 20.0, 16.0, 23.0, 23.0, 22.0, 25.0, 24.0, 22.0, 17.0, 27.0, 15.0, 24.0, 16.0, 15.0, 29.0, 22.0, 20.0, 22.0, 19.0, 21.0, 22.0, 16.0, 14.0, 16.0, 14.0, 21.0, 13.0, 16.0, 18.0, 25.0, 15.0, 14.0, 18.0, 23.0, 23.0, 20.0, 16.0, 19.0, 16.0, 20.0, 18.0, 20.0, 18.0, 17.0, 19.0, 17.0, 17.0, 24.0, 20.0, 18.0, 13.0, 20.0, 19.0],
+    name: 'Challenger: 21.0ms',
+    boxpoints: 'all',
+    jitter: 0.3,
+    pointpos: -1.8,
+    boxmean: 'sd',
+    type: 'box',
+    marker:{
+      size:2,
+      opacity:0.6
+    }
+  }
+];
+var layout3 = {
+  height: 500,
+  width: 900,
+  yaxis: {
+    title: 'Time ms',
+    type: 'log'
+  },
+  showlegend: true,
+  xaxis: {
+      showticklabels: false
+  },
+  title: 'Check instance status'
+};
+Plotly.newPlot('response3Div', data3, layout3);
+var data4 = [
+  {
+    y: [24.0, 27.0, 18.0, 18.0, 35.0, 26.0, 18.0, 14.0, 21.0, 20.0, 17.0, 23.0, 15.0, 23.0, 15.0, 22.0, 16.0, 15.0, 14.0, 15.0, 17.0, 17.0, 19.0, 25.0, 17.0, 12.0, 21.0, 16.0, 14.0, 17.0],
+    name: 'Reference: 19.0ms',
+    boxpoints: 'all',
+    jitter: 0.3,
+    pointpos: -1.8,
+    boxmean: 'sd',
+    type: 'box',
+    marker:{
+      size:2,
+      opacity:0.6
+    }
+  },
+  {
+    y: [23.0, 25.0, 19.0, 27.0, 15.0, 19.0, 20.0, 24.0, 16.0, 17.0, 16.0, 13.0, 15.0, 19.0, 20.0, 16.0, 14.0, 17.0, 24.0, 17.0, 20.0, 15.0, 16.0, 14.0, 17.0, 18.0, 15.0, 13.0, 18.0, 17.0],
+    name: 'Challenger: 18.0ms',
+    boxpoints: 'all',
+    jitter: 0.3,
+    pointpos: -1.8,
+    boxmean: 'sd',
+    type: 'box',
+    marker:{
+      size:2,
+      opacity:0.6
+    }
+  }
+];
+var layout4 = {
+  height: 500,
+  width: 900,
+  yaxis: {
+    title: 'Time ms',
+    type: 'log'
+  },
+  showlegend: true,
+  xaxis: {
+      showticklabels: false
+  },
+  title: 'Get instance url'
+};
+Plotly.newPlot('response4Div', data4, layout4);
+
+
+</script>
