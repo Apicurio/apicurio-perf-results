@@ -1,0 +1,10 @@
+{
+  "simulation": "simulations.End2EndSimulation",
+  "simulationId": "end2endsimulation",
+  "start": 1671521992362,
+  "description": "",
+  "scenarios": ["E2E Service Registry Simulation"],
+  "assertions": [
+
+  ]
+}
