@@ -1,0 +1,21 @@
+RUN	simulations.End2EndSimulation	end2endsimulation	1685425216283	 	3.5.1
+USER	E2E Service Registry Simulation	START	1685425216934
+REQUEST		Create registry instance	1685425217033	1685425217125	KO	status.find.is(200), but actually found 409
+REQUEST		Check instance status	1685425217183	1685425217211	KO	status.find.is(200), but actually found 404
+REQUEST		Check instance status	1685425218216	1685425218245	KO	status.find.is(200), but actually found 404
+REQUEST		Check instance status	1685425219248	1685425219273	KO	status.find.is(200), but actually found 404
+REQUEST		Check instance status	1685425220276	1685425220304	KO	status.find.is(200), but actually found 404
+REQUEST		Check instance status	1685425221307	1685425221334	KO	status.find.is(200), but actually found 404
+REQUEST		Check instance status	1685425222336	1685425222374	KO	status.find.is(200), but actually found 404
+REQUEST		Check instance status	1685425223376	1685425223405	KO	status.find.is(200), but actually found 404
+REQUEST		Check instance status	1685425224407	1685425224516	KO	status.find.is(200), but actually found 404
+REQUEST		Check instance status	1685425225518	1685425225553	KO	status.find.is(200), but actually found 404
+REQUEST		Check instance status	1685425226555	1685425226579	KO	status.find.is(200), but actually found 404
+REQUEST		Get instance url	1685425227582	1685425227611	KO	status.find.is(200), but actually found 404
+ERROR	Get Developer principalId: Failed to build request: No attribute named 'instance_url' is defined 	1685425227808
+ERROR	Grant access to Developer principalId: Failed to build request: No attribute named 'instance_url' is defined 	1685425228042
+ERROR	Create artifact: Failed to build request: No attribute named 'instance_url' is defined 	1685425228043
+ERROR	Search artifacts: Failed to build request: No attribute named 'instance_url' is defined 	1685425228043
+ERROR	Get artifact by ID: Failed to build request: No attribute named 'instance_url' is defined 	1685425228044
+REQUEST		Delete registry instance	1685425228545	1685425228572	KO	status.find.is(204), but actually found 404
+USER	E2E Service Registry Simulation	END	1685425228575
