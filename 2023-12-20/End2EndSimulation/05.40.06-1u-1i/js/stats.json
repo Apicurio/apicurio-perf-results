@@ -1,0 +1,395 @@
+{
+  "type": "GROUP",
+"name": "Global Information",
+"path": "",
+"pathFormatted": "group_missing-name-b06d1",
+"stats": {
+    "name": "Global Information",
+    "numberOfRequests": {
+        "total": 13,
+        "ok": 0,
+        "ko": 13
+    },
+    "minResponseTime": {
+        "total": 17,
+        "ok": 0,
+        "ko": 17
+    },
+    "maxResponseTime": {
+        "total": 124,
+        "ok": 0,
+        "ko": 124
+    },
+    "meanResponseTime": {
+        "total": 35,
+        "ok": 0,
+        "ko": 35
+    },
+    "standardDeviation": {
+        "total": 27,
+        "ok": 0,
+        "ko": 27
+    },
+    "percentiles1": {
+        "total": 27,
+        "ok": 0,
+        "ko": 27
+    },
+    "percentiles2": {
+        "total": 30,
+        "ok": 0,
+        "ko": 30
+    },
+    "percentiles3": {
+        "total": 84,
+        "ok": 0,
+        "ko": 84
+    },
+    "percentiles4": {
+        "total": 116,
+        "ok": 0,
+        "ko": 116
+    },
+    "group1": {
+    "name": "t < 800 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group2": {
+    "name": "800 ms < t < 1200 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group3": {
+    "name": "t > 1200 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group4": {
+    "name": "failed",
+    "count": 13,
+    "percentage": 100
+},
+    "meanNumberOfRequestsPerSecond": {
+        "total": 1.0833333333333333,
+        "ok": 0,
+        "ko": 1.0833333333333333
+    }
+},
+"contents": {
+"req_create-registry-9455b": {
+        "type": "REQUEST",
+        "name": "Create registry instance",
+"path": "Create registry instance",
+"pathFormatted": "req_create-registry-9455b",
+"stats": {
+    "name": "Create registry instance",
+    "numberOfRequests": {
+        "total": 1,
+        "ok": 0,
+        "ko": 1
+    },
+    "minResponseTime": {
+        "total": 58,
+        "ok": 0,
+        "ko": 58
+    },
+    "maxResponseTime": {
+        "total": 58,
+        "ok": 0,
+        "ko": 58
+    },
+    "meanResponseTime": {
+        "total": 58,
+        "ok": 0,
+        "ko": 58
+    },
+    "standardDeviation": {
+        "total": 0,
+        "ok": 0,
+        "ko": 0
+    },
+    "percentiles1": {
+        "total": 58,
+        "ok": 0,
+        "ko": 58
+    },
+    "percentiles2": {
+        "total": 58,
+        "ok": 0,
+        "ko": 58
+    },
+    "percentiles3": {
+        "total": 58,
+        "ok": 0,
+        "ko": 58
+    },
+    "percentiles4": {
+        "total": 58,
+        "ok": 0,
+        "ko": 58
+    },
+    "group1": {
+    "name": "t < 800 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group2": {
+    "name": "800 ms < t < 1200 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group3": {
+    "name": "t > 1200 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group4": {
+    "name": "failed",
+    "count": 1,
+    "percentage": 100
+},
+    "meanNumberOfRequestsPerSecond": {
+        "total": 0.08333333333333333,
+        "ok": 0,
+        "ko": 0.08333333333333333
+    }
+}
+    },"req_check-instance--969e3": {
+        "type": "REQUEST",
+        "name": "Check instance status",
+"path": "Check instance status",
+"pathFormatted": "req_check-instance--969e3",
+"stats": {
+    "name": "Check instance status",
+    "numberOfRequests": {
+        "total": 10,
+        "ok": 0,
+        "ko": 10
+    },
+    "minResponseTime": {
+        "total": 17,
+        "ok": 0,
+        "ko": 17
+    },
+    "maxResponseTime": {
+        "total": 124,
+        "ok": 0,
+        "ko": 124
+    },
+    "meanResponseTime": {
+        "total": 35,
+        "ok": 0,
+        "ko": 35
+    },
+    "standardDeviation": {
+        "total": 30,
+        "ok": 0,
+        "ko": 30
+    },
+    "percentiles1": {
+        "total": 27,
+        "ok": 0,
+        "ko": 27
+    },
+    "percentiles2": {
+        "total": 28,
+        "ok": 0,
+        "ko": 28
+    },
+    "percentiles3": {
+        "total": 82,
+        "ok": 0,
+        "ko": 82
+    },
+    "percentiles4": {
+        "total": 116,
+        "ok": 0,
+        "ko": 116
+    },
+    "group1": {
+    "name": "t < 800 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group2": {
+    "name": "800 ms < t < 1200 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group3": {
+    "name": "t > 1200 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group4": {
+    "name": "failed",
+    "count": 10,
+    "percentage": 100
+},
+    "meanNumberOfRequestsPerSecond": {
+        "total": 0.8333333333333334,
+        "ok": 0,
+        "ko": 0.8333333333333334
+    }
+}
+    },"req_get-instance-ur-a10da": {
+        "type": "REQUEST",
+        "name": "Get instance url",
+"path": "Get instance url",
+"pathFormatted": "req_get-instance-ur-a10da",
+"stats": {
+    "name": "Get instance url",
+    "numberOfRequests": {
+        "total": 1,
+        "ok": 0,
+        "ko": 1
+    },
+    "minResponseTime": {
+        "total": 23,
+        "ok": 0,
+        "ko": 23
+    },
+    "maxResponseTime": {
+        "total": 23,
+        "ok": 0,
+        "ko": 23
+    },
+    "meanResponseTime": {
+        "total": 23,
+        "ok": 0,
+        "ko": 23
+    },
+    "standardDeviation": {
+        "total": 0,
+        "ok": 0,
+        "ko": 0
+    },
+    "percentiles1": {
+        "total": 23,
+        "ok": 0,
+        "ko": 23
+    },
+    "percentiles2": {
+        "total": 23,
+        "ok": 0,
+        "ko": 23
+    },
+    "percentiles3": {
+        "total": 23,
+        "ok": 0,
+        "ko": 23
+    },
+    "percentiles4": {
+        "total": 23,
+        "ok": 0,
+        "ko": 23
+    },
+    "group1": {
+    "name": "t < 800 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group2": {
+    "name": "800 ms < t < 1200 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group3": {
+    "name": "t > 1200 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group4": {
+    "name": "failed",
+    "count": 1,
+    "percentage": 100
+},
+    "meanNumberOfRequestsPerSecond": {
+        "total": 0.08333333333333333,
+        "ok": 0,
+        "ko": 0.08333333333333333
+    }
+}
+    },"req_delete-registry-2fda3": {
+        "type": "REQUEST",
+        "name": "Delete registry instance",
+"path": "Delete registry instance",
+"pathFormatted": "req_delete-registry-2fda3",
+"stats": {
+    "name": "Delete registry instance",
+    "numberOfRequests": {
+        "total": 1,
+        "ok": 0,
+        "ko": 1
+    },
+    "minResponseTime": {
+        "total": 33,
+        "ok": 0,
+        "ko": 33
+    },
+    "maxResponseTime": {
+        "total": 33,
+        "ok": 0,
+        "ko": 33
+    },
+    "meanResponseTime": {
+        "total": 33,
+        "ok": 0,
+        "ko": 33
+    },
+    "standardDeviation": {
+        "total": 0,
+        "ok": 0,
+        "ko": 0
+    },
+    "percentiles1": {
+        "total": 33,
+        "ok": 0,
+        "ko": 33
+    },
+    "percentiles2": {
+        "total": 33,
+        "ok": 0,
+        "ko": 33
+    },
+    "percentiles3": {
+        "total": 33,
+        "ok": 0,
+        "ko": 33
+    },
+    "percentiles4": {
+        "total": 33,
+        "ok": 0,
+        "ko": 33
+    },
+    "group1": {
+    "name": "t < 800 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group2": {
+    "name": "800 ms < t < 1200 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group3": {
+    "name": "t > 1200 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group4": {
+    "name": "failed",
+    "count": 1,
+    "percentage": 100
+},
+    "meanNumberOfRequestsPerSecond": {
+        "total": 0.08333333333333333,
+        "ok": 0,
+        "ko": 0.08333333333333333
+    }
+}
+    }
+}
+
+}
