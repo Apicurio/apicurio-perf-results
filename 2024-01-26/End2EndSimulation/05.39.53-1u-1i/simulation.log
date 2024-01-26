@@ -1,0 +1,21 @@
+RUN	simulations.End2EndSimulation	end2endsimulation	1706247569155	 	3.5.1
+USER	E2E Service Registry Simulation	START	1706247570021
+REQUEST		Create registry instance	1706247570168	1706247570213	KO	status.find.is(200), but actually found 503
+ERROR	Check instance status: Failed to build request: No attribute named 'instance_id' is defined 	1706247570253
+ERROR	Check instance status: Failed to build request: No attribute named 'instance_id' is defined 	1706247571255
+ERROR	Check instance status: Failed to build request: No attribute named 'instance_id' is defined 	1706247572256
+ERROR	Check instance status: Failed to build request: No attribute named 'instance_id' is defined 	1706247573257
+ERROR	Check instance status: Failed to build request: No attribute named 'instance_id' is defined 	1706247574258
+ERROR	Check instance status: Failed to build request: No attribute named 'instance_id' is defined 	1706247575259
+ERROR	Check instance status: Failed to build request: No attribute named 'instance_id' is defined 	1706247576259
+ERROR	Check instance status: Failed to build request: No attribute named 'instance_id' is defined 	1706247577260
+ERROR	Check instance status: Failed to build request: No attribute named 'instance_id' is defined 	1706247578261
+ERROR	Check instance status: Failed to build request: No attribute named 'instance_id' is defined 	1706247579262
+ERROR	Get instance url: Failed to build request: No attribute named 'instance_id' is defined 	1706247580264
+ERROR	Get Developer principalId: Failed to build request: No attribute named 'instance_url' is defined 	1706247580534
+ERROR	Grant access to Developer principalId: Failed to build request: No attribute named 'instance_url' is defined 	1706247580683
+ERROR	Create artifact: Failed to build request: No attribute named 'instance_url' is defined 	1706247580683
+ERROR	Search artifacts: Failed to build request: No attribute named 'instance_url' is defined 	1706247580683
+ERROR	Get artifact by ID: Failed to build request: No attribute named 'instance_url' is defined 	1706247580685
+ERROR	Delete registry instance: Failed to build request: No attribute named 'instance_id' is defined 	1706247581186
+USER	E2E Service Registry Simulation	END	1706247581188
